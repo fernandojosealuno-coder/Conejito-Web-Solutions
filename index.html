@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conejito Web Solutions | Sites que geram resultados</title>
+  <meta name="description" content="Criamos sites modernos, rápidos e personalizados para fortalecer sua presença digital e transformar visitantes em clientes. Landing pages, sites institucionais e mais." />
+  <meta name="theme-color" content="#07377F" />
+
+  <!-- Favicon (ícone quadrado) -->
+  <link rel="icon" type="image/png" href="images/icone-conejito.png" />
+  <link rel="apple-touch-icon" href="images/icone-conejito.png" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====================== CABEÇALHO ====================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Conejito Web Solutions - Início">
+        <img src="images/logo-conejito.png" alt="Conejito Web Solutions" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--primary nav__cta">Solicitar orçamento</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__content reveal" data-reveal="up">
+          <span class="hero__badge">Conejito Web Solutions</span>
+          <h1 class="hero__title text-balance">Seu negócio merece um site que realmente gera resultados.</h1>
+          <p class="hero__text">Criamos sites modernos, rápidos e personalizados para fortalecer sua presença digital e transformar visitantes em clientes.</p>
+
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary" data-whatsapp="orcamento">Quero meu site</a>
+            <a href="#portfolio" class="btn btn--ghost">Ver projetos</a>
+          </div>
+
+          <ul class="hero__highlights">
+            <li><span class="dot"></span> Sites responsivos</li>
+            <li><span class="dot"></span> Atendimento personalizado</li>
+            <li><span class="dot"></span> Carregamento rápido</li>
+            <li><span class="dot"></span> Integração com WhatsApp</li>
+          </ul>
+        </div>
+
+        <!-- Composição de mockups (computador + celular) -->
+        <div class="hero__visual reveal" data-reveal="right">
+          <div class="mockup mockup--desktop">
+            <div class="mockup__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup__screen">
+              <div class="mockup__nav">
+                <img src="images/icone-conejito.png" alt="" class="mockup__logo" />
+                <div class="mockup__lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="mockup__hero">
+                <div class="mockup__h"></div>
+                <div class="mockup__p"></div>
+                <div class="mockup__p mockup__p--short"></div>
+                <div class="mockup__btn"></div>
+              </div>
+              <div class="mockup__cards">
+                <div class="mockup__card"></div>
+                <div class="mockup__card"></div>
+                <div class="mockup__card"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mockup mockup--phone">
+            <div class="mockup__notch"></div>
+            <div class="mockup__phone-screen">
+              <img src="images/icone-conejito.png" alt="" class="mockup__phone-logo" />
+              <div class="mockup__h"></div>
+              <div class="mockup__p"></div>
+              <div class="mockup__btn mockup__btn--full"></div>
+              <div class="mockup__card mockup__card--full"></div>
+              <div class="mockup__card mockup__card--full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SERVIÇOS ====================== -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Serviços</span>
+          <h2 class="section__title text-balance">Tudo o que seu negócio precisa para crescer online</h2>
+          <p class="section__subtitle">Soluções completas, do primeiro contato até a manutenção do seu site.</p>
+        </header>
+
+        <div class="grid grid--services">
+          <!-- Cada card será populado, mas mantemos o markup estático para acessibilidade -->
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>Páginas focadas em conversão, ideais para campanhas e captação de clientes.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Sites Institucionais</h3>
+            <p>Presença profissional completa para apresentar sua empresa e seus serviços.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <h3>Portfólios Profissionais</h3>
+            <p>Mostre seus trabalhos com elegância e conquiste novos clientes.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            </div>
+            <h3>Catálogos Digitais</h3>
+            <p>Exponha seus produtos de forma organizada, moderna e fácil de navegar.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            </div>
+            <h3>Integração com WhatsApp</h3>
+            <p>Botões e fluxos que levam seus visitantes direto para uma conversa.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <h3>Integração com Google Maps</h3>
+            <p>Facilite que seus clientes encontrem o seu endereço com um clique.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17.5A4.5 4.5 0 0 1 6 9a6 6 0 0 1 11.6-1.5A4 4 0 1 1 19 17.5z"/></svg>
+            </div>
+            <h3>Hospedagem</h3>
+            <p>Seu site no ar com estabilidade, segurança e bom desempenho.</p>
+          </article>
+
+          <article class="card card--service reveal" data-reveal="up">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z"/></svg>
+            </div>
+            <h3>Manutenção de Sites</h3>
+            <p>Atualizações, ajustes e suporte contínuo para manter tudo funcionando.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PORTFÓLIO ====================== -->
+    <section class="section section--alt" id="portfolio">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Portfólio</span>
+          <h2 class="section__title text-balance">Projetos que geram resultados reais</h2>
+          <p class="section__subtitle">Alguns exemplos de trabalhos. Os links são editáveis no arquivo <code>script.js</code>.</p>
+        </header>
+
+        <div class="grid grid--portfolio" id="portfolioGrid">
+          <!-- Projetos inseridos via JavaScript (editáveis) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SOBRE ====================== -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__visual reveal" data-reveal="left">
+          <div class="about__icon-wrap">
+            <img src="images/icone-conejito.png" alt="Ícone Conejito Web Solutions" class="about__icon" />
+          </div>
+        </div>
+
+        <div class="about__content reveal" data-reveal="right">
+          <span class="section__tag">Sobre</span>
+          <h2 class="section__title text-balance">Tecnologia com atendimento próximo.</h2>
+          <p class="about__text">A Conejito Web Solutions ajuda pequenos negócios e profissionais a conquistarem uma presença digital moderna, profissional e personalizada.</p>
+
+          <ul class="about__list">
+            <li><span class="check" aria-hidden="true">✓</span> Atendimento personalizado</li>
+            <li><span class="check" aria-hidden="true">✓</span> Design responsivo</li>
+            <li><span class="check" aria-hidden="true">✓</span> Comunicação transparente</li>
+            <li><span class="check" aria-hidden="true">✓</span> Suporte após a entrega</li>
+            <li><span class="check" aria-hidden="true">✓</span> Manutenção mensal</li>
+          </ul>
+
+          <a href="#" class="btn btn--primary" data-whatsapp="orcamento">Falar com a gente</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PROCESSO ====================== -->
+    <section class="section section--alt" id="processo">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Processo</span>
+          <h2 class="section__title text-balance">Como trabalhamos</h2>
+          <p class="section__subtitle">Um caminho simples e transparente, do início ao seu site no ar.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal" data-reveal="up">
+            <span class="timeline__num">1</span>
+            <h3>Conversa inicial</h3>
+            <p>Entendemos seu negócio, seus objetivos e o que você precisa.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="up">
+            <span class="timeline__num">2</span>
+            <h3>Planejamento</h3>
+            <p>Definimos estrutura, conteúdo e visual ideais para o seu projeto.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="up">
+            <span class="timeline__num">3</span>
+            <h3>Desenvolvimento</h3>
+            <p>Criamos seu site com tecnologia moderna, rápido e responsivo.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="up">
+            <span class="timeline__num">4</span>
+            <h3>Publicação e suporte</h3>
+            <p>Colocamos seu site no ar e seguimos disponíveis para você.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====================== DEPOIMENTOS ====================== -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Depoimentos</span>
+          <h2 class="section__title text-balance">O que dizem sobre nós</h2>
+          <p class="section__subtitle">Textos de exemplo — substitua por avaliações reais dos seus clientes.</p>
+        </header>
+
+        <div class="grid grid--testimonials">
+          <figure class="card card--testimonial reveal" data-reveal="up">
+            <span class="badge-editable">Exemplo editável</span>
+            <blockquote>“Profissionais atenciosos e o site ficou exatamente como eu imaginava. Recomendo muito!”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">M</span>
+              <span><strong>Maria S.</strong><small>Cliente exemplo</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card card--testimonial reveal" data-reveal="up">
+            <span class="badge-editable">Exemplo editável</span>
+            <blockquote>“Meu negócio passou a ser encontrado no Google e o número de clientes aumentou.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">J</span>
+              <span><strong>João P.</strong><small>Cliente exemplo</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card card--testimonial reveal" data-reveal="up">
+            <span class="badge-editable">Exemplo editável</span>
+            <blockquote>“Atendimento rápido pelo WhatsApp e entrega no prazo combinado. Excelente!”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">A</span>
+              <span><strong>Ana L.</strong><small>Cliente exemplo</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PLANOS ====================== -->
+    <section class="section section--alt" id="planos">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Planos</span>
+          <h2 class="section__title text-balance">Escolha o ideal para você</h2>
+          <p class="section__subtitle">Cada projeto é único. Solicite um orçamento personalizado sem compromisso.</p>
+        </header>
+
+        <div class="grid grid--plans">
+          <article class="card card--plan reveal" data-reveal="up">
+            <h3>Landing Page</h3>
+            <p class="plan__price">Orçamento personalizado</p>
+            <ul class="plan__features">
+              <li>Página única focada em conversão</li>
+              <li>Design responsivo</li>
+              <li>Integração com WhatsApp</li>
+              <li>Otimização básica</li>
+            </ul>
+            <a href="#" class="btn btn--ghost" data-whatsapp="orcamento">Solicitar orçamento</a>
+          </article>
+
+          <article class="card card--plan card--plan-featured reveal" data-reveal="up">
+            <span class="plan__tag">Mais escolhido</span>
+            <h3>Site + Manutenção</h3>
+            <p class="plan__price">Orçamento personalizado</p>
+            <ul class="plan__features">
+              <li>Site institucional completo</li>
+              <li>Manutenção mensal inclusa</li>
+              <li>Suporte prioritário</li>
+              <li>Atualizações de conteúdo</li>
+            </ul>
+            <a href="#" class="btn btn--primary" data-whatsapp="orcamento">Solicitar orçamento</a>
+          </article>
+
+          <article class="card card--plan reveal" data-reveal="up">
+            <h3>Site Institucional</h3>
+            <p class="plan__price">Orçamento personalizado</p>
+            <ul class="plan__features">
+              <li>Várias páginas</li>
+              <li>Design responsivo</li>
+              <li>Integração com WhatsApp e Maps</li>
+              <li>Otimização para Google</li>
+            </ul>
+            <a href="#" class="btn btn--ghost" data-whatsapp="orcamento">Solicitar orçamento</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FAQ ====================== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Dúvidas</span>
+          <h2 class="section__title text-balance">Perguntas frequentes</h2>
+        </header>
+
+        <div class="faq" id="faq">
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Qual é o prazo de desenvolvimento?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>O prazo varia conforme o tipo de site. Landing pages costumam ficar prontas em poucos dias, enquanto sites maiores podem levar algumas semanas. Definimos tudo na conversa inicial.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">O site funciona bem no celular?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Sim! Todos os nossos sites são totalmente responsivos e se adaptam perfeitamente a celulares, tablets e computadores.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Posso fazer alterações no projeto?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Com certeza. Durante o desenvolvimento ajustamos o projeto até ficar do seu jeito, e oferecemos planos de manutenção para mudanças futuras.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Como funciona o domínio?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Ajudamos você a registrar e configurar o domínio (o endereço do seu site, como seunegocio.com.br) de forma simples.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">E a hospedagem?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Cuidamos da hospedagem para garantir que seu site fique no ar com estabilidade e segurança.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Existe suporte após a entrega?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Sim. Continuamos disponíveis para tirar dúvidas e dar suporte mesmo depois da publicação do site.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Como funciona a manutenção?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Oferecemos planos de manutenção mensal com atualizações, ajustes e suporte contínuo para manter tudo funcionando perfeitamente.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal="up">
+            <button class="faq__question" aria-expanded="false">Quais são as formas de pagamento?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__answer"><p>Trabalhamos com formas de pagamento flexíveis. Conversamos sobre as melhores opções para o seu orçamento.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTATO ====================== -->
+    <section class="section section--alt" id="contato">
+      <div class="container container--narrow">
+        <header class="section__head reveal" data-reveal="up">
+          <span class="section__tag">Contato</span>
+          <h2 class="section__title text-balance">Vamos criar seu site?</h2>
+          <p class="section__subtitle">Preencha o formulário e enviaremos sua mensagem direto pelo WhatsApp.</p>
+        </header>
+
+        <form class="form reveal" id="contactForm" data-reveal="up" novalidate>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              <span class="form__error" data-error-for="nome"></span>
+            </div>
+            <div class="form__group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa (opcional)" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label for="whatsapp">WhatsApp *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
+              <span class="form__error" data-error-for="whatsapp"></span>
+            </div>
+            <div class="form__group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+              <span class="form__error" data-error-for="email"></span>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label for="tipo">Tipo de site *</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecione uma opção</option>
+              <option>Landing Page</option>
+              <option>Site Institucional</option>
+              <option>Portfólio Profissional</option>
+              <option>Catálogo Digital</option>
+              <option>Site + Manutenção</option>
+              <option>Outro</option>
+            </select>
+            <span class="form__error" data-error-for="tipo"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o seu projeto..." required></textarea>
+            <span class="form__error" data-error-for="mensagem"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== RODAPÉ ====================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__brand">
+        <img src="images/logo-conejito.png" alt="Conejito Web Solutions" class="footer__logo" />
+        <p class="footer__tagline">Sites criados para conectar negócios e pessoas.</p>
+        <p class="footer__location">📍 Bagé, Rio Grande do Sul</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Links rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Landing Pages</a></li>
+          <li><a href="#servicos">Sites Institucionais</a></li>
+          <li><a href="#servicos">Portfólios</a></li>
+          <li><a href="#servicos">Manutenção</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <ul class="footer__social">
+          <li><a href="#" data-social="whatsapp">WhatsApp</a></li>
+          <li><a href="#" data-social="instagram" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" data-social="facebook" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#" data-social="email">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 Conejito Web Solutions. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="#" class="whatsapp-float" id="whatsappFloat" aria-label="Falar no WhatsApp" data-whatsapp="orcamento">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.612zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
