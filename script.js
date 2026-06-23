@@ -10,9 +10,9 @@ const CONFIG = {
   whatsapp: "5561991779096",
 
   // Contatos e redes sociais
-  email: "contato@conejitoweb.com.br",
-  instagram: "https://instagram.com/conejitoweb",
-  facebook: "https://facebook.com/conejitoweb",
+  email: "barbaconejito@gmail.com",
+  instagram: "https://www.instagram.com/webconejito/",
+  facebook: "https://www.facebook.com/profile.php?id=61591148315432",
 
   // Mensagem padrão usada nos botões de orçamento
   mensagemOrcamento:
@@ -21,7 +21,7 @@ const CONFIG = {
   // Projetos do portfólio (edite livremente)
   projetos: [
     {
-      nome: "Barbearia Estilo",
+      nome: "Template 01",
       categoria: "Site para Barbearia",
       descricao:
         "Site moderno com agendamento, galeria de serviços e integração com WhatsApp.",
@@ -30,7 +30,7 @@ const CONFIG = {
       link: "#", // troque pelo link real do projeto
     },
     {
-      nome: "Feito Pra Você Universitário",
+      nome: "Template 02",
       categoria: "Loja / Catálogo Digital",
       descricao:
         "Catálogo digital de produtos personalizados com pedidos direto pelo WhatsApp.",
@@ -39,7 +39,7 @@ const CONFIG = {
       link: "#", // troque pelo link real do projeto
     },
     {
-      nome: "Negócio Local",
+      nome: "Template 03",
       categoria: "Site Institucional",
       descricao:
         "Presença digital profissional com mapa, serviços e contato facilitado.",
@@ -50,14 +50,44 @@ const CONFIG = {
   ],
 };
 
+const THEME_STORAGE_KEY = "conejito-theme";
+
 /* Helpers para montar links */
 const wppLink = (msg) =>
   `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+function getPreferredTheme() {
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  document.documentElement.style.colorScheme = theme;
+
+  const themeToggle = document.getElementById("themeToggle");
+  if (!themeToggle) return;
+
+  const themeLabel = themeToggle.querySelector(".nav__theme-label");
+  if (themeLabel) {
+    themeLabel.textContent = theme === "dark" ? "Tema claro" : "Tema escuro";
+  }
+  themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"
+  );
+  themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+}
 
 /* =========================================================
    2) INICIALIZAÇÃO
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
+  applyTheme(getPreferredTheme());
+  initThemeToggle();
   initHeaderScroll();
   initMobileMenu();
   initWhatsappButtons();
@@ -82,16 +112,34 @@ function initHeaderScroll() {
 }
 
 /* =========================================================
-   4) MENU MOBILE (hambúrguer)
+  4) TEMA CLARO / ESCURO
+  ========================================================= */
+function initThemeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
+  if (!themeToggle) return;
+
+  themeToggle.addEventListener("click", () => {
+   const currentTheme = document.body.dataset.theme === "dark" ? "dark" : "light";
+   const nextTheme = currentTheme === "dark" ? "light" : "dark";
+   localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+   applyTheme(nextTheme);
+  });
+}
+
+/* =========================================================
+  5) MENU MOBILE (hambúrguer)
    ========================================================= */
 function initMobileMenu() {
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("nav");
-  if (!toggle || !nav) return;
+  const backdrop = document.getElementById("navBackdrop");
+  if (!toggle || !nav || !backdrop) return;
 
   const closeMenu = () => {
     nav.classList.remove("is-open");
     toggle.classList.remove("is-open");
+    backdrop.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Abrir menu");
   };
@@ -99,9 +147,13 @@ function initMobileMenu() {
   toggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     toggle.classList.toggle("is-open", isOpen);
+    backdrop.classList.toggle("is-open", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
   });
+
+  backdrop.addEventListener("click", closeMenu);
 
   // Fecha ao clicar em um link
   nav.querySelectorAll("a").forEach((link) =>
@@ -112,10 +164,14 @@ function initMobileMenu() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeMenu();
+  }, { passive: true });
 }
 
 /* =========================================================
-   5) BOTÕES DE WHATSAPP (orçamento)
+  6) BOTÕES DE WHATSAPP (orçamento)
    ========================================================= */
 function initWhatsappButtons() {
   const link = wppLink(CONFIG.mensagemOrcamento);
@@ -127,7 +183,7 @@ function initWhatsappButtons() {
 }
 
 /* =========================================================
-   6) LINKS SOCIAIS (rodapé)
+  7) LINKS SOCIAIS (rodapé)
    ========================================================= */
 function initSocialLinks() {
   const map = {
@@ -143,7 +199,7 @@ function initSocialLinks() {
 }
 
 /* =========================================================
-   7) PORTFÓLIO (renderizado a partir do CONFIG)
+  8) PORTFÓLIO (renderizado a partir do CONFIG)
    ========================================================= */
 function initPortfolio() {
   const grid = document.getElementById("portfolioGrid");
@@ -174,7 +230,7 @@ function initPortfolio() {
 }
 
 /* =========================================================
-   8) FAQ (acordeão acessível)
+  9) FAQ (acordeão acessível)
    ========================================================= */
 function initFaq() {
   const items = document.querySelectorAll(".faq__item");
@@ -203,7 +259,7 @@ function initFaq() {
 }
 
 /* =========================================================
-   9) FORMULÁRIO DE CONTATO (validação + envio WhatsApp)
+  10) FORMULÁRIO DE CONTATO (validação + envio WhatsApp)
    ========================================================= */
 function initContactForm() {
   const form = document.getElementById("contactForm");

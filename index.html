@@ -34,11 +34,24 @@
           <li><a href="#servicos" class="nav__link">Serviços</a></li>
           <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
           <li><a href="#sobre" class="nav__link">Sobre</a></li>
-          <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
           <li><a href="#contato" class="nav__link">Contato</a></li>
         </ul>
         <a href="#contato" class="btn btn--primary nav__cta">Solicitar orçamento</a>
+        <button type="button" class="btn btn--ghost nav__theme" id="themeToggle" aria-label="Ativar tema escuro" aria-pressed="false">
+          <span class="nav__theme-icon" aria-hidden="true">
+            <svg class="nav__theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4.5" />
+              <path d="M12 2.5v2.1M12 19.4v2.1M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M2.5 12h2.1M19.4 12h2.1M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+            </svg>
+            <svg class="nav__theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A8.2 8.2 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z" />
+            </svg>
+          </span>
+          <span class="nav__theme-label">Tema escuro</span>
+        </button>
       </nav>
+
+      <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
 
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
@@ -261,46 +274,6 @@
             <p>Colocamos seu site no ar e seguimos disponíveis para você.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- ====================== DEPOIMENTOS ====================== -->
-    <section class="section" id="depoimentos">
-      <div class="container">
-        <header class="section__head reveal" data-reveal="up">
-          <span class="section__tag">Depoimentos</span>
-          <h2 class="section__title text-balance">O que dizem sobre nós</h2>
-          <p class="section__subtitle">Textos de exemplo — substitua por avaliações reais dos seus clientes.</p>
-        </header>
-
-        <div class="grid grid--testimonials">
-          <figure class="card card--testimonial reveal" data-reveal="up">
-            <span class="badge-editable">Exemplo editável</span>
-            <blockquote>“Profissionais atenciosos e o site ficou exatamente como eu imaginava. Recomendo muito!”</blockquote>
-            <figcaption>
-              <span class="avatar" aria-hidden="true">M</span>
-              <span><strong>Maria S.</strong><small>Cliente exemplo</small></span>
-            </figcaption>
-          </figure>
-
-          <figure class="card card--testimonial reveal" data-reveal="up">
-            <span class="badge-editable">Exemplo editável</span>
-            <blockquote>“Meu negócio passou a ser encontrado no Google e o número de clientes aumentou.”</blockquote>
-            <figcaption>
-              <span class="avatar" aria-hidden="true">J</span>
-              <span><strong>João P.</strong><small>Cliente exemplo</small></span>
-            </figcaption>
-          </figure>
-
-          <figure class="card card--testimonial reveal" data-reveal="up">
-            <span class="badge-editable">Exemplo editável</span>
-            <blockquote>“Atendimento rápido pelo WhatsApp e entrega no prazo combinado. Excelente!”</blockquote>
-            <figcaption>
-              <span class="avatar" aria-hidden="true">A</span>
-              <span><strong>Ana L.</strong><small>Cliente exemplo</small></span>
-            </figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
