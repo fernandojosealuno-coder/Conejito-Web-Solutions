@@ -21,31 +21,52 @@ const CONFIG = {
   // Projetos do portfólio (edite livremente)
   projetos: [
     {
-      nome: "Template 01",
-      categoria: "Site para Barbearia",
+      nome: "Site Saúde & Fitness",
+      categoria: "Landing Page",
       descricao:
-        "Site moderno com agendamento, galeria de serviços e integração com WhatsApp.",
-      imagem:
-        "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
-      link: "#", // troque pelo link real do projeto
+        "Landing page de alta conversão para profissional de saúde, com seções de depoimentos, planos e CTA direto.",
+      imagem: "images/portfolio/ketty-sato.png",
+      link: "#",
     },
     {
-      nome: "Template 02",
-      categoria: "Loja / Catálogo Digital",
+      nome: "App MedNeeds",
+      categoria: "Landing Page / App",
       descricao:
-        "Catálogo digital de produtos personalizados com pedidos direto pelo WhatsApp.",
-      imagem:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      link: "#", // troque pelo link real do projeto
+        "Landing page para aplicativo médico com funcionalidades, segurança e formulário de pré-lançamento.",
+      imagem: "images/portfolio/medneeds.png",
+      link: "#",
     },
     {
-      nome: "Template 03",
+      nome: "AgroETA",
       categoria: "Site Institucional",
       descricao:
-        "Presença digital profissional com mapa, serviços e contato facilitado.",
-      imagem:
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
-      link: "#", // troque pelo link real do projeto
+        "Site institucional para empresa do agronegócio com galeria de projetos e contato facilitado.",
+      imagem: "images/portfolio/agroeta.jpg",
+      link: "#",
+    },
+    {
+      nome: "Catálogo de Bebidas",
+      categoria: "Catálogo Digital",
+      descricao:
+        "Catálogo digital elegante para distribuidora de bebidas com galeria de produtos e pedidos pelo WhatsApp.",
+      imagem: "images/portfolio/bebidas.jpg",
+      link: "#",
+    },
+    {
+      nome: "Procoat Services",
+      categoria: "Site de Serviços",
+      descricao:
+        "Site profissional para empresa de reformas e pintura, com portfólio de antes/depois e depoimentos.",
+      imagem: "images/portfolio/procoat.png",
+      link: "#",
+    },
+    {
+      nome: "Vivence Joias",
+      categoria: "E-commerce",
+      descricao:
+        "Loja online elegante para joalheria com catálogo de produtos e design sofisticado.",
+      imagem: "images/portfolio/vivence-joias.png",
+      link: "#",
     },
   ],
 };
